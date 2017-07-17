@@ -116,6 +116,8 @@
 		self.$nav = null;
 		self.$arrows = [];
 
+		self.$cont = null;
+
 		//  Set our indexes and totals
 		self.total = 0;
 		self.current = 0;
@@ -142,9 +144,14 @@
 
 			//  We want to keep this script as small as possible
 			//  so we'll optimise some checks
-			$.each(['nav', 'arrows', 'keys', 'infinite'], function(index, module) {
+			// $.each(['nav', 'arrows', 'keys', 'infinite'], function(index, module) {
+			// 	self.options[module] && self['init' + $._ucfirst(module)]();
+			// });
+			self.initCont();
+			$.each(['nav', 'arrows', 'keys', 'infinite', 'cont'], function(index, module) {
 				self.options[module] && self['init' + $._ucfirst(module)]();
 			});
+			
 
 			//  Add swipe support
 			if(jQuery.event.special.swipe && self.options.swipe) {
@@ -241,7 +248,6 @@
 				//  If we've already set a label, let's use that
 				//  instead of generating one
 				var label = this.getAttribute('data-nav') || key + 1;
-
 				//  Listen to any callback functions
 				if($.isFunction(self.options.nav)) {
 					label = self.options.nav.call(self.$slides.eq(key), key, label);
@@ -271,7 +277,72 @@
 		};
 
 		//new added: set up the slide content
-		
+		self.initCont = function() {
+			var sentences = ["share your ideas with others", 
+							"Easily Create Creative Invention with CocoMod",
+							"We Provide All-in-one Solution for STEAM Education"];
+			var button_content = ["Go To Explore",
+								  "Go To Play",
+								  "About Us"];
+			
+			self.$slides.each(function(key) {
+				var $cont = '<div class="menu-bar">\n' +
+						'				<div class="name">COCOROBO</div>\n' +
+						'\n' +
+						'				<div class="all-categories">\n' +
+						'					<div>\n' +
+						'						<div class="category">About</div>\n' +
+						'						<ul class="subcategories">\n' +
+						'							<li>Company</li>\n' +
+						'							<li>Services</li>\n' +
+						'							<li>Manifesto</li>\n' +
+						'						</ul>\n' +
+						'					</div> \n' +
+						'					<div style="margin-left: 10px;margin-right: 10px;">\n' +
+						'						<div class="category">Courses</div>\n' +
+						'						<ul class="subcategories">\n' +
+						'							<li>To School</li>\n' +
+						'							<li>To Workshop</li>\n' +
+						'						</ul>\n' +
+						'					</div>\n' +
+						'					<div style="margin-left: 10px;margin-right: 10px;">\n' +
+						'						<div class="category">Explore</div>\n' +
+						'						<ul class="subcategories">\n' +
+						'							<li>Project</li>\n' +
+						'							<li>Playground</li>\n' +
+						'							<li>Wiki</li>\n' +
+						'						</ul>\n' +
+						'					</div>\n' +
+						'					<div>\n' +
+						'						<div class="category">Forum</div>\n' +
+						'						<ul class="subcategories">\n' +
+						'							<li>Sign In</li>\n' +
+						'							<li>FAQ</li>\n' +
+						'						</ul>\n' +
+						'					</div>\n' +
+						'					<div>\n' +
+						'						<div class="category">Store</div>\n' +
+						'						<ul class="subcategories">\n' +
+						'							<li>CocoMod</li>\n' +
+						'							<li>CocoKit</li>\n' +
+						'							<li>Coco3DP</li>\n' +
+						'						</ul>\n' +
+						'					</div>\n' +
+						'				</div>\n' +
+						'			</div>\n' +
+						'			<div class="slide-single">\n' +
+						'				<div class="sentence">'+sentences[key]+'</div>\n' +
+						'				<button type="button">'+button_content[key]+'</button>\n' +
+						'			</div>\n' +
+						'			<div class="slide-nav">\n' +
+						'				<div class="slogan white-font">Create</div>\n' +
+						'				<div class="slogan white-font">Design</div>\n' +
+						'				<div class="slogan white-font">Inspire</div>\n' +
+						'			</div>\n';
+				var slide_num = '.slide-' + key;
+				self.$cont = $(slide_num).append($cont);
+			});
+		};
 
 
 		//  Set up our left-right arrow navigation
@@ -468,7 +539,7 @@
 			if(target >= self.total) {
 				target = 0;
 			}
-			// console.log(self.current);
+
 			return self.animate(target, 'next');
 		};
 
