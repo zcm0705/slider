@@ -278,7 +278,7 @@
 
 		//new added: set up the slide content
 		self.initCont = function() {
-			var sentences = ["share your ideas with others", 
+			var sentences = ["Share Your Ideas With Others", 
 							"Easily Create Creative Invention with CocoMod",
 							"We Provide All-in-one Solution for STEAM Education"];
 			var button_content = ["Go To Explore",

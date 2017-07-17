@@ -15,8 +15,10 @@
   overflow: auto;
   margin: 0;
   padding: 0;
-  background-color: orange;
-  height: 600px;
+  /*background-color: orange;*/
+  height: 100%;
+
+  font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
 }
 
 .unslider-wrap {
@@ -97,6 +99,9 @@ img {
 .name, .all-categories {
   display:inline-block;
 }
+.name {
+  font-size: 30px;
+}
 
 .name, .category, .white-font {
   font-weight: bold;
@@ -117,11 +122,12 @@ img {
 
 .subcategories > li {
   color: white;
+  font-weight: lighter;
 }
 
 .slide-single {
   margin-left: 40px;
-  width: 25%;
+  width: 40%;
   margin-bottom: 40px;
 }
 
@@ -134,6 +140,8 @@ img {
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
+  font-size: 50px;
+  height: 200px;
 }
 
 button {
@@ -148,15 +156,19 @@ html, body {
   height: 100%;
   min-height: 100%;
 }
-/*.my-slider {
-  height: 500px;
-}
-*/
+
 .slide-nav {
   margin: 40px;
 }
+
 .slide-nav > .slogan {
   display: inline-block;
   margin: 10px;
   margin-bottom: 5px;
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  font-size: 15px;
 }
