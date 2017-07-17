@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="my-slider">
+	<ul>
+		<li class="slide" style="background: url(image/teaching.jpg);background-size: 100% 100%;">
+			<div class="menu-bar">
+				<div class="name">COCOROBO</div>
+
+				<div class="all-categories">
+					<div>
+						<div class="category">About</div>
+						<ul class="subcategories">
+							<li>Company</li>
+							<li>Services</li>
+							<li>Manifesto</li>
+						</ul>
+					</div> 
+					<div style="margin-left: 10px;margin-right: 10px;">
+						<div class="category">Courses</div>
+						<ul class="subcategories">
+							<li>To School</li>
+							<li>To Workshop</li>
+						</ul>
+					</div>
+					<div style="margin-left: 10px;margin-right: 10px;">
+						<div class="category">Explore</div>
+						<ul class="subcategories">
+							<li>Project</li>
+							<li>Playground</li>
+							<li>Wiki</li>
+						</ul>
+					</div>
+					<div>
+						<div class="category">Forum</div>
+						<ul class="subcategories">
+							<li>Sign In</li>
+							<li>FAQ</li>
+						</ul>
+					</div>
+					<div>
+						<div class="category">Store</div>
+						<ul class="subcategories">
+							<li>CocoMod</li>
+							<li>CocoKit</li>
+							<li>Coco3DP</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="slide-single">
+				<div class="sentence">share your ideas with others</div>
+				<button type="button">Go To Explore</button>
+			</div>
+			<div class="slide-nav">
+				<div class="slogan white-font">Create</div>
+				<div class="slogan white-font">Design</div>
+				<div class="slogan white-font">Inspire</div>
+			</div>
+		</li>
+
+		<li class="slide" style="background-image: url(image/ccrb.jpg);background-size: 100% 100%;">
+			<div class="menu-bar">
+				<div class="name">COCOROBO</div>
+				<div></div>
+			</div>
+			<div class="slide-single">
+				<div class="sentence">Easily Create Creative Invention with CocoMod</div>
+				<button type="button">Go To Play</button>
+			</div>
+		</li>
+
+		<li class="slide" style="background-image: url(image/playing.jpg);background-size: 100% 100%;">
+			<div class="menu-bar">
+				<div class="name">COCOROBO</div>
+				<div></div>
+			</div>
+			<div class="slide-single">
+				<div class="sentence">We Provide All-in-one Solution for STEAM Education</div>
+				<button type="button">About us</button>
+			</div>
+		</li>
+
+		<!-- <li></li>
+		<li></li>
+		<li></li> -->
+	</ul>
+	<!-- <div style="bakcground-color:transparent!important;z-index: 55;top: 10px">hello?</div> -->
+</div>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/unslider.js"></script>
+<link rel="stylesheet" href="css/unslider.css">
+<link rel="stylesheet" href="css/unslider-dots.css">
+<script>
+		jQuery(document).ready(function($) {
+			$('.my-slider').unslider({
+				speed: 500,               //  The speed to animate each slide (in milliseconds)
+				delay: 3000,              //  The delay between slide animations (in milliseconds)
+				complete: function() {},  //  A function that gets called after every slide animation
+				keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+				dots: true,               //  Display dot navigation
+				fluid: false              //  Support responsive design. May break non-responsive designs
+			});
+		});
+</script>
+</body>
+</html>
