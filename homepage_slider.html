@@ -1,25 +1,89 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div class="my-slider">
-	<ul>
-		<li class="slide slide-0" style="background: url(image/teaching.jpg);background-size: 100% 100%;">	
-		</li>
+	<div class="wrapper">
+	<!-- 不变的内容，包括COCOROBO和其他的目录条 -->
+		<div class="unchanged-content">
+			<div class="menu-bar">
+				<div class="name">
+					COCOROBO
+				</div>
+				<div class="all-categories">
+					<div>
+						<div class="category">About</div>
+						<ul class="subcategories">
+							<li>Company</li>
+							<li>Services</li>
+							<li>Manifesto</li>
+						</ul>
+					</div>
+					<div style="margin-left: 10px;margin-right: 10px;">
+						<div class="category">Courses</div>
+						<ul class="subcategories">
+							<li>To School</li>
+							<li>To Workshop</li>
+						</ul>
+					</div>
+					<div style="margin-left: 10px;margin-right: 10px;">
+						<div class="category">Explore</div>
+						<ul class="subcategories">
+							<li>Project</li>
+							<li>Playground</li>
+							<li>Wiki</li>
+						</ul>
+					</div>
+					<div>
+						<div class="category">Forum</div>
+						<ul class="subcategories">
+							<li>Sign In</li>
+							<li>FAQ</li>
+						</ul>
+					</div>
+					<div>
+						<div class="category">Store</div>
+						<ul class="subcategories">
+							<li>CocoMod</li>
+							<li>CocoKit</li>
+							<li>Coco3DP</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<li class="slide slide-1" style="background-image: url(image/ccrb.jpg);background-size: 100% 100%;">
-		</li>
+		<!-- nav长条形按钮 -->
+		<div class="nav">
+			<div class="slide-single">
+			<!-- 内容根据slide的不同而不同，由unslider.js动态生成 -->
+			</div>
+			<div class="slide-nav">
+				<div class="slogan white-font">Create</div>
+				<div class="slogan white-font">Design</div>
+				<div class="slogan white-font">Inspire</div>
+			</div>
+		</div>
 
-		<li class="slide slide-2" style="background-image: url(image/playing.jpg);background-size: 100% 100%;">
-		</li>
+		<!-- 背景图 -->
+		<div class="my-slider">
+			<ul>
+				<li class="slide slide-0" style="background: url(image/teaching.jpg);background-size: 100% 100%;">	
+				</li>
 
-	</ul>
-</div>
+				<li class="slide slide-1" style="background-image: url(image/ccrb.jpg);background-size: 100% 100%;">
+				</li>
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/unslider.js"></script>
-<link rel="stylesheet" href="css/unslider.css">
-<link rel="stylesheet" href="css/unslider-dots.css">
-<script>
+				<li class="slide slide-2" style="background-image: url(image/playing.jpg);background-size: 100% 100%;">
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/unslider.js"></script>
+	<link rel="stylesheet" href="css/unslider.css">
+	<link rel="stylesheet" href="css/unslider-dots.css">
+	<script>
 		jQuery(document).ready(function($) {
 			$('.my-slider').unslider({
 				speed: 500,               //  The speed to animate each slide (in milliseconds)
@@ -30,6 +94,6 @@
 				fluid: false              //  Support responsive design. May break non-responsive designs
 			});
 		});
-</script>
+	</script>
 </body>
 </html>

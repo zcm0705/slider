@@ -286,59 +286,9 @@
 								  "About Us"];
 			
 			self.$slides.each(function(key) {
-				var $cont = '<div class="menu-bar">\n' +
-						'				<div class="name">COCOROBO</div>\n' +
-						'\n' +
-						'				<div class="all-categories">\n' +
-						'					<div>\n' +
-						'						<div class="category">About</div>\n' +
-						'						<ul class="subcategories">\n' +
-						'							<li>Company</li>\n' +
-						'							<li>Services</li>\n' +
-						'							<li>Manifesto</li>\n' +
-						'						</ul>\n' +
-						'					</div> \n' +
-						'					<div style="margin-left: 10px;margin-right: 10px;">\n' +
-						'						<div class="category">Courses</div>\n' +
-						'						<ul class="subcategories">\n' +
-						'							<li>To School</li>\n' +
-						'							<li>To Workshop</li>\n' +
-						'						</ul>\n' +
-						'					</div>\n' +
-						'					<div style="margin-left: 10px;margin-right: 10px;">\n' +
-						'						<div class="category">Explore</div>\n' +
-						'						<ul class="subcategories">\n' +
-						'							<li>Project</li>\n' +
-						'							<li>Playground</li>\n' +
-						'							<li>Wiki</li>\n' +
-						'						</ul>\n' +
-						'					</div>\n' +
-						'					<div>\n' +
-						'						<div class="category">Forum</div>\n' +
-						'						<ul class="subcategories">\n' +
-						'							<li>Sign In</li>\n' +
-						'							<li>FAQ</li>\n' +
-						'						</ul>\n' +
-						'					</div>\n' +
-						'					<div>\n' +
-						'						<div class="category">Store</div>\n' +
-						'						<ul class="subcategories">\n' +
-						'							<li>CocoMod</li>\n' +
-						'							<li>CocoKit</li>\n' +
-						'							<li>Coco3DP</li>\n' +
-						'						</ul>\n' +
-						'					</div>\n' +
-						'				</div>\n' +
-						'			</div>\n' +
-						'			<div class="slide-single">\n' +
+				var $cont = 
 						'				<div class="sentence">'+sentences[key]+'</div>\n' +
-						'				<button type="button">'+button_content[key]+'</button>\n' +
-						'			</div>\n' +
-						'			<div class="slide-nav">\n' +
-						'				<div class="slogan white-font">Create</div>\n' +
-						'				<div class="slogan white-font">Design</div>\n' +
-						'				<div class="slogan white-font">Inspire</div>\n' +
-						'			</div>\n';
+						'				<button type="button">'+button_content[key]+'</button>\n';
 				var slide_num = '.slide-' + key;
 				self.$cont = $(slide_num).append($cont);
 			});

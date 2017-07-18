@@ -172,3 +172,12 @@ button {
   width: 120px;
   font-size: 15px;
 }
+.wrapper {
+  position: relative;
+}
+.unchanged-content, .my-slider, .nav {
+  position: absolute;
+}
+.unchanged-content {
+  z-index: 100;
+}
