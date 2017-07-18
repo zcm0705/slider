@@ -55,6 +55,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  height: 100%;
 }
 .unslider-arrow {
   position: absolute;
@@ -125,6 +126,11 @@ img {
   font-weight: lighter;
 }
 
+.subcategories {
+  list-style: none;
+  padding-left: 0;
+}
+
 .slide-single {
   margin-left: 40px;
   width: 40%;
@@ -152,7 +158,7 @@ button {
   font-weight: bold;
 }
 
-html, body {
+html, body, .wrapper, .my-slider {
   height: 100%;
   min-height: 100%;
 }
@@ -178,6 +184,12 @@ button {
 .unchanged-content, .my-slider, .nav {
   position: absolute;
 }
-.unchanged-content {
+
+.unchanged-content, .nav {
   z-index: 100;
+  width: 100%;
+}
+
+.nav {
+  top: 75%;
 }

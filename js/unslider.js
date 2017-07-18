@@ -290,7 +290,7 @@
 						'				<div class="sentence">'+sentences[key]+'</div>\n' +
 						'				<button type="button">'+button_content[key]+'</button>\n';
 				var slide_num = '.slide-' + key;
-				self.$cont = $(slide_num).append($cont);
+				self.$cont = $(slide_num).find('.slide-single').append($cont);
 			});
 		};
 
