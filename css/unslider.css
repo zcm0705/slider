@@ -17,8 +17,6 @@
   padding: 0;
   /*background-color: orange;*/
   height: 100%;
-
-  font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
 }
 
 .unslider-wrap {
@@ -161,6 +159,7 @@ button {
 html, body, .wrapper, .my-slider {
   height: 100%;
   min-height: 100%;
+  font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
 }
 
 .slide-nav {
@@ -192,4 +191,11 @@ button {
 
 .nav {
   top: 75%;
+}
+.for-position {
+  height: 30%;
+}
+
+.entrance-btn {
+  /*outline: none;*/
 }

@@ -288,7 +288,7 @@
 			self.$slides.each(function(key) {
 				var $cont = 
 						'				<div class="sentence">'+sentences[key]+'</div>\n' +
-						'				<button type="button">'+button_content[key]+'</button>\n';
+						'				<button type="button" class="entrance-btn">'+button_content[key]+'</button>\n';
 				var slide_num = '.slide-' + key;
 				self.$cont = $(slide_num).find('.slide-single').append($cont);
 			});

@@ -17,6 +17,8 @@
   text-align: left;
   margin-left:2px;
   /*margin-bottom: 100px;*/
+  padding-left: 0;
+  margin-top: 0;
 }
 .unslider-nav ol li {
   display: inline-block;
