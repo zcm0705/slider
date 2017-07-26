@@ -77,7 +77,7 @@
 			//  "fade": each slide fades in to each other
 			//  "horizontal": each slide moves from left to right
 			//  "vertical": each slide moves from top to bottom
-			animation: 'horizontal',
+			animation: 'fade',
 
 			//  If you don't want to use a list to display your slides,
 			//  you can change it here. Not recommended and you'll need
@@ -242,6 +242,7 @@
 		//  Set up our navigation dots
 		self.initNav = function() {
 			var $nav = $('<nav class="' + self.prefix + 'nav"><ol /></nav>');
+			// var $nav = $('<nav class="' + self.prefix + 'nav mdl-grid"><ol /></nav>');
 
 			//  Build our click navigation item-by-item
 			self.$slides.each(function(key) {
@@ -270,7 +271,7 @@
 
 				//  Set the right active class, remove any other ones
 				$me.siblings().removeClass(self.options.activeClass);
-
+				// console.log($me);
 				//  Move the slide
 				self.animate($me.attr('data-slide'));
 			});

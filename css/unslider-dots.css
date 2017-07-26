@@ -22,7 +22,6 @@
 }
 .unslider-nav ol li {
   display: inline-block;
-  width: 20px;
   height: 6px;
   margin: 0 4px;
   background: transparent;
@@ -32,8 +31,12 @@
   border: 2px solid #fff;
   cursor: pointer;
 
-  width: 48px;
-  margin-right: 22px;
+  width: 50px;
+  margin-right: 24px;
+}
+
+.unslider-nav ol li:hover {
+  cursor: pointer;
 }
 .unslider-nav ol li.unslider-active {
   background: #fff;

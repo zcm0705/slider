@@ -1,87 +1,104 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="mdl/material.min.css">
+<script src="mdl/material.min.js"></script>
+</head>
+
 <body>
-	<div class="wrapper">
-	<!-- 不变的内容，包括COCOROBO和其他的目录条 -->
-		<div class="unchanged-content">
-			<div class="menu-bar">
-				<div class="name">
+	<!-- <div class="web-head-wrapper add-box-shadow">
+		<div class="userInfo">
+			<div class="login-button">登入</div>
+			<div class="signup-button">註冊</div>
+		</div>
+	</div> -->
+
+	
+	<div class="slider-wrapper">
+		<!-- 不变的内容，包括COCOROBO和目录条 -->
+		<div class="unchanged-content mdl-grid">
+			<div class="menu-bar mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+				<div class="name mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
 					COCOROBO
 				</div>
-				<div class="all-categories">
-					<div>
-						<div class="category">About</div>
-						<ul class="subcategories">
-							<li>Company</li>
-							<li>Services</li>
-							<li>Manifesto</li>
-						</ul>
-					</div>
-					<div style="margin-left: 10px;margin-right: 10px;">
-						<div class="category">Courses</div>
-						<ul class="subcategories">
-							<li>To School</li>
-							<li>To Workshop</li>
-						</ul>
-					</div>
-					<div style="margin-left: 10px;margin-right: 10px;">
-						<div class="category">Explore</div>
-						<ul class="subcategories">
-							<li>Project</li>
-							<li>Playground</li>
-							<li>Wiki</li>
+
+				<div class="all-categories mdl-cell mdl-cell--8-col">
+					<!-- Adds N columns of whitespace before the cell -->
+					<div class="mdl-cell--1-offset">
+						<div class="category mdl-cell mdl-cell--2-col">About</div>
+						<ul class="subcategories mdl-cell mdl-cell--2-col">
+							<li><span class="page-link">Company</span></li>
+							<li><span class="page-link">Services</span></li>
+							<li><span class="page-link">Manifesto</span></li>
 						</ul>
 					</div>
 					<div>
-						<div class="category">Forum</div>
-						<ul class="subcategories">
-							<li>Sign In</li>
-							<li>FAQ</li>
+						<div class="category mdl-cell mdl-cell--2-col">Courses</div>
+						<ul class="subcategories mdl-cell mdl-cell--2-col">
+							<li><span class="page-link ">School</span></li>
+							<li><span class="page-link">Workshop</span></li>
 						</ul>
 					</div>
 					<div>
-						<div class="category">Store</div>
-						<ul class="subcategories">
-							<li>CocoMod</li>
-							<li>CocoKit</li>
-							<li>Coco3DP</li>
+						<div class="category mdl-cell mdl-cell--2-col">Explore</div>
+						<ul class="subcategories mdl-cell mdl-cell--2-col">
+							<li><span class="page-link">Project</span></li>
+							<li><span class="page-link">Playground</span></li>
+							<li><span class="page-link">Wiki</span></li>
+						</ul>
+					</div>
+					<div>
+						<div class="category mdl-cell mdl-cell--2-col">Forum</div>
+						<ul class="subcategories mdl-cell mdl-cell--2-col">
+							<li><span class="page-link">Sign&nbspIn</span></li>
+							<li><span class="page-link">FAQ</span></li>
+						</ul>
+					</div>
+					<div>
+						<div class="category mdl-cell mdl-cell--2-col">Store</div>
+						<ul class="subcategories mdl-cell mdl-cell--2-col">
+							<li><span class="page-link">CocoMod</span></li>
+							<li><span class="page-link">CocoKit</span></li>
+							<li><span class="page-link">Coco3DP</span></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- nav长条形按钮 -->
-		<div class="nav">
-			<div class="slide-nav">
-				<div class="slogan white-font">Create</div>
-				<div class="slogan white-font">Design</div>
-				<div class="slogan white-font">Inspire</div>
+		<!-- nav长条形轮播图按钮 -->
+		<div class="nav mdl-grid">
+			<div class="slide-nav mdl-cell mdl-cell--12-col">
+				<div class="slogan white-font mdl-cell mdl-cell--1-col">Create</div>
+				<div class="slogan white-font mdl-cell mdl-cell--1-col">Design</div>
+				<div class="slogan white-font mdl-cell mdl-cell--1-col">Inspire</div>
 			</div>
 		</div>
+		<!-- unslider.js initNav()修改按钮，如添加mdl类等 -->
 
 		<!-- 背景图 -->
 		<div class="my-slider">
 			<ul>
-				<li class="slide slide-0" style="background: url(image/teaching.jpg);background-size: 100% 100%;">
+				<li class="slide slide-0" style="background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(255, 153, 51, 0.5)), url(image/teaching.jpg); background-size: 100% 100%;">
 					<!-- for-position是用来把slide-single挤到下面去，要不然slide-single会顶格。需用更好的方案代替。 -->
 					<div class="for-position"></div>
 					<div class="slide-single">
-					<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
+						<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
 					</div>
 				</li>
 
-				<li class="slide slide-1" style="background-image: url(image/ccrb.jpg);background-size: 100% 100%;">
+				<li class="slide slide-1" style="background-image: radial-gradient(rgba(0, 0, 256, 0.2), rgba(0, 0, 0, 0.9)), url(image/ccrb.jpg);background-size: 100% 100%;">
 					<div class="for-position"></div>
 					<div class="slide-single">
-					<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
+						<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
 					</div>
 				</li>
 
-				<li class="slide slide-2" style="background-image: url(image/playing.jpg);background-size: 100% 100%;">
+				<li class="slide slide-2" style="background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),url(image/playing.jpg);background-size: 100% 100%;">
 					<div class="for-position"></div>
 					<div class="slide-single">
-					<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
+						<!-- 内容根据slide的不同而不同，由unslider.js - initCont()动态生成 -->
 					</div>
 				</li>
 
@@ -93,6 +110,7 @@
 	<script src="js/unslider.js"></script>
 	<link rel="stylesheet" href="css/unslider.css">
 	<link rel="stylesheet" href="css/unslider-dots.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<script>
 		jQuery(document).ready(function($) {
 			$('.my-slider').unslider({

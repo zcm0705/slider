@@ -12,7 +12,7 @@
  *   hardware-accelerated goodness.
  */
 .unslider {
-  overflow: auto;
+  /*overflow: auto;*/
   margin: 0;
   padding: 0;
   /*background-color: orange;*/
@@ -89,6 +89,23 @@
 }
 
 /*new added*/
+body {
+  background-color: #fafafa;
+}
+.web-head-wrapper {
+    margin: -10px;
+    position: relative;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    height: 40px;
+    line-height: 50px;
+    background-color: rgba(22, 102, 205, 0.84);
+    z-index: 100;
+}
+
+.add-box-shadow {
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.04), 0 3px 3px -2px rgba(0,0,0,.06), 0 4px 8px 0 rgba(0,0,0,.2);
+}
 
 img {
   height: 100%;
@@ -97,7 +114,9 @@ img {
 
 .name, .all-categories {
   display:inline-block;
+  font-size: 20px;
 }
+
 .name {
   font-size: 30px;
 }
@@ -110,7 +129,7 @@ img {
 
 .all-categories {
   float:right;
-  width: 45%;
+  /*width: 45%;*/
 }
 
 .all-categories > div {
@@ -121,7 +140,6 @@ img {
 
 .subcategories > li {
   color: white;
-  font-weight: lighter;
 }
 
 .subcategories {
@@ -143,9 +161,10 @@ img {
 .sentence {
   font-weight: bold;
   color: white;
-  margin-bottom: 20px;
-  font-size: 50px;
-  height: 200px;
+  margin: 20px;
+  font-size: 40px;
+  line-height: 100%;
+  height: 150px;
 }
 
 button {
@@ -156,10 +175,15 @@ button {
   font-weight: bold;
 }
 
-html, body, .wrapper, .my-slider {
+html, body, .slider-wrapper, .my-slider {
   height: 100%;
-  min-height: 100%;
-  font-family:'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+  font-family:'Poppins', sans-serif;
+}
+
+.my-slider {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .slide-nav {
@@ -168,7 +192,6 @@ html, body, .wrapper, .my-slider {
 
 .slide-nav > .slogan {
   display: inline-block;
-  margin: 10px;
   margin-bottom: 5px;
 }
 
@@ -177,10 +200,14 @@ button {
   width: 120px;
   font-size: 15px;
 }
-.wrapper {
+
+.slider-wrapper {
   position: relative;
+  height: 100%;
+  margin: 0 -10px;
 }
-.unchanged-content, .my-slider, .nav {
+
+.unchanged-content, .nav {
   position: absolute;
 }
 
@@ -196,6 +223,41 @@ button {
   height: 30%;
 }
 
+.userInfo {
+  float: right;
+}
+
+.homepage {
+  float: left;
+
+}
+
+.login-button, .signup-button {
+  display: inline;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+}
+
+.login-button:hover, .signup-button:hover {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+li {
+  margin: 10px 0 0 0;
+}
+
+.page-link:hover{
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+
 .entrance-btn {
-  /*outline: none;*/
+  outline: none;
+  margin: 20px;
+}
+
+.entrance-btn:hover {
+  cursor: pointer;
 }
