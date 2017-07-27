@@ -193,6 +193,7 @@ html, body, .slider-wrapper, .my-slider {
 .slide-nav > .slogan {
   display: inline-block;
   margin-bottom: 5px;
+  margin-right: 35px;
 }
 
 button {
